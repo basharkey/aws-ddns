@@ -11,6 +11,13 @@ route53:ListResourceRecordSets
 ```
 
 
+Installation:
+
+```
+pip3 install -r requirements.txt
+```
+
+
 Usage:
 
 ```
