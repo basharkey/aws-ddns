@@ -18,6 +18,9 @@ parser.add_argument('-r', '--record',  metavar='record_name', required=True, hel
 parser.add_argument('-z', '--hosted-zone-id', metavar='hosted_zone_id', required=True, help="AWS hosted zone id")
 args = parser.parse_args()
 
+record_name = args.record
+hosted_zone_id = args.hosted_zone_id
+
 r = requests.get('https://checkip.amazonaws.com')
 if r.status_code != 200:
     raise SystemExit("Unable to retrieve public IP")
