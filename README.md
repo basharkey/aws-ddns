@@ -21,6 +21,6 @@ pip3 install -r requirements.txt
 Usage:
 
 ```
-aws-ddns.py -r ddns.example.com -z ABCDE12345ABCDE123456
-aws-ddns.py --record ddns.example.com --hosted-zone-id ABCDE12345ABCDE123456
+aws-ddns.py -r ddns.example.com. -z ABCDE12345ABCDE123456
+aws-ddns.py --record ddns.example.com. --hosted-zone-id ABCDE12345ABCDE123456
 ```
