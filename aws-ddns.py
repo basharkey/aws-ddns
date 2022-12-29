@@ -55,7 +55,8 @@ for record_name in record_names:
 if len(change_batch['Changes']) > 0:
     boto3.client('route53').change_resource_record_sets(HostedZoneId=hosted_zone_id, ChangeBatch=change_batch)
 
-    for record_name in record_names:
+    for change in change_batch['Changes']:
+        record_name = change['ResourceRecordSet']['Name']
         aws_record_ip = get_aws_record_ip(hosted_zone_id, record_name)
         if aws_record_ip == public_ip:
             print(f"{repr(record_name)} successfully updated to {aws_record_ip}")
