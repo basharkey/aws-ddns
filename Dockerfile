@@ -1,4 +1,4 @@
-FROM python:3.12-rc-slim-bullseye
+FROM registry.hub.docker.com/library/python:3.12-rc-slim-bullseye
 
 WORKDIR /usr/src/app
 
