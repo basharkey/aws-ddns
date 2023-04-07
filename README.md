@@ -24,3 +24,10 @@ Usage:
 aws-ddns.py -r ddns.example.com. -z ABCDE12345ABCDE123456
 aws-ddns.py --record ddns.example.com. --hosted-zone-id ABCDE12345ABCDE123456
 ```
+
+## Docker
+
+```
+docker build . -t aws-ddns
+docker run --rm --mount type=bind,src="/home/<user>/.aws/credentials",target="/root/.aws/credentials" --name ddns aws-ddns:latest --record ddns.example.com. --hosted-zone-id ABCDE12345ABCDE123456
+```

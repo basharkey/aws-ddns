@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import requests
 import boto3
 import argparse
@@ -62,3 +61,5 @@ if len(change_batch['Changes']) > 0:
             print(f"{repr(record_name)} successfully updated to {aws_record_ip}")
         else:
             raise SystemExit("Record update failed")
+else:
+    print("No changes all records up to date")
